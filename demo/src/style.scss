@@ -1,0 +1,71 @@
+$material-icons-font-path: '../node_modules/material-icons/iconfont/'; 
+@import '../node_modules/material-icons/iconfont/material-icons.scss';
+
+html, body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+button:focus {
+    outline: none;
+}
+
+.fizz-buzz {
+    padding: 1rem;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    
+    .fizz-buzz__button {
+        font-size: 1.5rem;
+        background: transparent;
+        border: 1px solid red;
+        font-weight: bold;
+        border-radius: 1rem;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer__reset-button {
+    border: 0;
+    background: transparent;
+
+    .material-icons {
+        font-size: 2rem;
+    }
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba($color: #000000, $alpha: .97);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.5rem;
+
+    p {
+        text-align: center
+    }
+    .material-icons {
+        color: white;
+        font-size: 5rem;
+    }
+}

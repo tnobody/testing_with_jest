@@ -1,0 +1,41 @@
+# 0️⃣ Zero config
+
+---
+
+import {CodeSlide} from '../components/code-slide';
+
+<CodeSlide 
+    code={require('!raw-loader!../../demo/install.sh').default}
+    lang="bash"
+    highlights={[
+        {line: 2},
+        {line: [7, 8]},
+    ]}
+/>
+
+---
+
+
+<CodeSlide 
+    code={JSON.stringify({scripts: require('../../demo/package.json').scripts}, null ,2)}
+    lang="json"
+    highlights={[
+        {line: 3},
+    ]}
+/>
+
+Add _jest_ as default test command (`npm test`)
+
+---
+
+<CodeSlide
+    code={require('!raw-loader!./basic-test.ts').default}
+    lang="typescript"
+    lineNumber={true}
+    highlights={[
+        {line: [0, 12]},
+        {line: [5, 7]},
+        {line: [2, 10]},
+        {line: [3, 9]}
+    ]}
+/>

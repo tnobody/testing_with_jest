@@ -1,0 +1,38 @@
+# 👌 Powerful Assertions
+
+---
+
+import {CodeSlide} from '../components/code-slide';
+
+<CodeSlide 
+    code={require('!raw-loader!../../demo/src/__tests__/matchers.spec.ts').default}
+    lineNumber={true}
+    lang="typescript"
+    highlights={[
+        {line: 1},
+        {line: 2},
+        {line: 3},
+        {line: 4},
+        {line: 5},
+        {line: 6},
+        {line: 7},
+        {line: 8},
+        {line: 9},
+    ]}
+/>
+
+---
+
+
+<CodeSlide 
+    code={require('!raw-loader!../../demo/src/__tests__/to-be-or-not-to-be.spec.ts').default}
+    lineNumber={true}
+    lang="typescript"
+    highlights={[
+       {line: [2,3,5]},
+       {line: [6,7,8,9, 10]},
+       {line: [12,13, 14]},
+       {line: [16, 17,18,19,20]}
+    ]}
+/>
+

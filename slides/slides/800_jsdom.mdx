@@ -1,0 +1,33 @@
+# 🤖 JSDom
+
+---
+
+<img src="https://github.com/jsdom/jsdom/raw/master/logo.svg?sanitize=true" alt="JSDom Logo" width="200" height="200" />
+
+> "A JavaScript implementation of the WHATWG DOM and HTML standards, for use with node.js"
+
+From [https://github.com/jsdom/jsdom](https://github.com/jsdom/jsdom)
+
+---
+
+import {CodeSlide} from '../components/code-slide';
+
+<CodeSlide 
+    code={require('!raw-loader!../../demo/src/__tests__/app.component.spec.ts').default}
+    lineNumber={true}
+    lang="typescript"
+    highlights={[
+        {line: [11]},
+        {line: [13, 14,15,16]},
+        {line: [15]},
+    ]}
+/>
+
+---
+
+# 🤨 Caveats of JSDom
+
+- It's good for simple use-cases and interactions
+- Will not validate browser specific behaviour
+- Not always on the edge
+  - e.g. Customelements / Shadowdom is not supported

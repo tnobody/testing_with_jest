@@ -1,0 +1,9 @@
+language: node_js
+
+before_script:
+  - npm i gh-pages -g
+script: 
+  - (cd slides && npm run build)
+  - (cd demo && npm t -- --coverage && npm run build)
+  - (mkdir web && cp slides/dist web)
+  - gh-pages web

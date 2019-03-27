@@ -1,0 +1,37 @@
+# 👻 Mocking
+
+---
+
+import {CodeSlide} from '../components/code-slide';
+
+<CodeSlide 
+    code={require('!raw-loader!../../demo/src/__tests__/mocking.spec.ts').default}
+    lineNumber={true}
+    lang="typescript"
+    highlights={[
+        {line: [0,19]},
+        {line: [2,3,4, 5]},
+        {line: [7,8,9,10,11]},
+        {line: [13,14,15,16,17]},
+    ]}
+/>
+
+---
+
+<CodeSlide 
+    code={require('!raw-loader!../../demo/src/__mocks__/request-animation-frame.mock.ts').default}
+    lineNumber={true}
+    lang="typescript"
+    highlights={[
+        {line: [3,4,5,6,7,8]},
+    ]}
+/>
+
+---
+
+# 🗒️ Notes on mocking
+
+- Mocks are very powerful and _easy_ to use
+  - might lead to too much mocking
+- Very complex scenarios are possible
+- No real good mock for Node.js filesystem-api

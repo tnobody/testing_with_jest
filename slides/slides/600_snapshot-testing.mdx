@@ -1,0 +1,37 @@
+# 📸 Snapshot Testing
+
+---
+
+import {CodeSlide} from '../components/code-slide';
+import {Appear} from 'mdx-deck'
+
+<CodeSlide
+    code={'expect(dataProducer()).toMatchSnapshot();'}
+    lineNumber={true}
+    lang="typescript"
+    highlights={[
+        {line: 0}
+    ]}
+ />
+
+- First call creates a file with the *output* of `dataProducer`
+- all consecutive runs will compare *output* with the file contents
+- Assertions fails when contents differ
+
+<Appear>
+    <span>⚠️ Always commit the files to VCS</span>
+</Appear>
+
+---
+
+# 🤨 Caveats
+
+- Poor / No handling placeholder values (e.g. for Dates)
+- No control
+- You cannot "read" the test like a spec
+- Broken outputs will be valid and noboy sees this
+- [Detailed explanation of the caveats](https://medium.com/@tomgold_48918/why-i-stopped-using-snapshot-testing-with-jest-3279fe41ffb2)
+
+<Appear>
+    <span>💭 My opinion: Dont use it (much)</span>
+</Appear>

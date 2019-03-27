@@ -1,0 +1,26 @@
+{
+  "name": "slides",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "mdx-deck": "2.0.5",
+    "prismjs": "^1.16.0",
+    "react": "^16.8.5",
+    "react-icons": "^3.5.0",
+    "spectacle": "^5.4.0",
+    "spectacle-code-slide": "^0.5.2",
+    "styled-components": "^4.2.0"
+  },
+  "devDependencies": {
+    "mdx-deck-code-surfer": "^0.5.5",
+    "raw-loader": "^2.0.0"
+  },
+  "scripts": {
+    "start": "mdx-deck index.js",
+    "build": "mdx-deck build index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
