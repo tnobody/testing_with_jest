@@ -6,7 +6,7 @@ const Flex = styled.div `
     display: flex;
     flex: 1;
     justify-content: center;
-    flex-direction: ${({direction = 'row'}) => direction}
+    flex-direction: ${({direction = 'row'}) => direction};
 `;
 
 const TitleImage = styled.img `
@@ -24,8 +24,8 @@ export const SplitImage = ({
     children
 }) => ( 
     <Flex direction = "column">
-        <TitleImage src={imgSrc} isAvatar={isAvatar} />
-        <Flex>
+        <TitleImage src={imgSrc} isAvatar={isAvatar} className="animated fadeInDown" />
+        <Flex className="animated fadeInUp">
             {children}
         </Flex> 
     </Flex>

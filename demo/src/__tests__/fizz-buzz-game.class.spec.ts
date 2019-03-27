@@ -9,7 +9,7 @@ describe('FizzBuzzGame', () => {
     beforeEach(() => {
         concreteFizzBuzz = new FizzBuzz();
         fizzBuzzGameUnderTest = new FizzBuzzGame(concreteFizzBuzz);
-    })
+    }) 
 
     it('should work call fizzBuzz::getFizzBuzzForNumber with increasing numbers', () => {
         jest.spyOn(concreteFizzBuzz, "getFizzBuzzForNumber");

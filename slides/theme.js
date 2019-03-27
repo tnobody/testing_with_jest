@@ -26,10 +26,15 @@ export default {
     font: 'Calibri',
     h1: {
         color: '#2e2d2c',
+        fontVariant: 'small-caps',
+        borderBottom: '3px solid #ffcc00',
         //background: '#ffe271',
-        borderRadius: '.5rem',
-        padding: '1rem',
+        padding: '1rem 2rem 1rem 2rem',
         //boxShadow: '0px 3px 10px 0px rgba(0,0,0,0.75)'
+    },
+    a: {
+        color: '#ffe271',
+        textDecoration: 'none',
     },
     Provider: MyProvider
 }

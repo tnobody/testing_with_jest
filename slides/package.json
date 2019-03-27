@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "animate.css": "^3.7.0",
     "mdx-deck": "2.0.5",
     "prismjs": "^1.16.0",
     "react": "^16.8.5",

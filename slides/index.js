@@ -10,6 +10,7 @@ import {slides as s700} from './slides/700_mocking.mdx';
 import {slides as s800} from './slides/800_jsdom.mdx';
 import {slides as s900} from './slides/900_cli.mdx';
 import {slides as s999} from './slides/999_outro.mdx';
+import 'animate.css/animate.min.css'
 
 export {default as theme} from './theme'
 

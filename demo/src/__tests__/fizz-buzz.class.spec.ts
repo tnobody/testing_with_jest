@@ -23,4 +23,9 @@ describe('FizzBuzz', () => {
         expect(fizzBuzzResult).toBe("Buzz")
     })
 
+    it('should return "FizzBuzz" for 15', () => {
+        const fizzBuzzResult = fizzBuzzUnderTest.getFizzBuzzForNumber(15)
+        expect(fizzBuzzResult).toBe("FizzBuzz")
+    })
+
 })
