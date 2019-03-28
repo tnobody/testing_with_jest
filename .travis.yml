@@ -7,4 +7,4 @@ script:
   - (cd slides && npm i && npm run build)
   - (cd demo && npm i && npm t -- --coverage && npm run build)
   - (mkdir web && cp -a slides/dist/. web)
-  - gh-pages --dist web --repo=https://GH_TOKEN@github.com/tnobody/testing_with_jest.git --silent
+  - gh-pages --dist web --repo=https://$(GH_TOKEN)@github.com/tnobody/testing_with_jest.git --silent
