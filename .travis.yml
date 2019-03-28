@@ -6,5 +6,5 @@ before_script:
 script: 
   - (cd slides && npm i && npm run build)
   - (cd demo && npm i && npm t -- --coverage && npm run build)
-  - (mkdir web && cp slides/dist web)
+  - (mkdir web && cp -a slides/dist/. web)
   - gh-pages --dist web

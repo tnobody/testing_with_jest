@@ -7,7 +7,7 @@ import {Appear} from 'mdx-deck'
 
 <CodeSlide
     code={'expect(dataProducer()).toMatchSnapshot();'}
-    lineNumber={true}
+    lineNumber={false}
     lang="typescript"
     highlights={[
         {line: 0}
@@ -15,7 +15,7 @@ import {Appear} from 'mdx-deck'
  />
 
 - First call creates a file with the *output* of `dataProducer`
-- all consecutive runs will compare *output* with the file contents
+- all consecutive calls will compare *output* with the file contents
 - Assertions fails when contents differ
 
 <Appear>
