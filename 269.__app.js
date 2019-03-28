@@ -1,0 +1,15 @@
+exports.ids = [269];
+exports.modules = {
+
+/***/ "./node_modules/prismjs/components/prism-regex.js":
+/*!********************************************************!*\
+  !*** ./node_modules/prismjs/components/prism-regex.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("(function (Prism) {\n\n\tvar specialEscape = {\n\t\tpattern: /\\\\[\\\\(){}[\\]^$+*?|.]/,\n\t\talias: 'escape'\n\t};\n\tvar escape = /\\\\(?:x[\\da-fA-F]{2}|u[\\da-fA-F]{4}|u\\{[\\da-fA-F]+\\}|c[a-zA-Z]|0[0-7]{0,2}|[123][0-7]{2}|.)/\n\tvar charClass = /\\\\[wsd]|\\.|\\\\p{[^{}]+}/i\n\n\tvar rangeChar = '(?:[^\\\\\\\\-]|' + escape.source + ')';\n\tvar range = RegExp(rangeChar + '-' + rangeChar);\n\n\t// the name of a capturing group\n\tvar groupName = {\n\t\tpattern: /(<|')[^<>']+(?=[>']$)/,\n\t\tlookbehind: true,\n\t\talias: 'variable'\n\t};\n\n\tvar backreference = [\n\t\t/\\\\(?![123][0-7]{2})[1-9]/, // a backreference which is not an octal escape\n\t\t{\n\t\t\tpattern: /\\\\k<[^<>']+>/,\n\t\t\tinside: {\n\t\t\t\t'group-name': groupName\n\t\t\t}\n\t\t}\n\t];\n\n\tPrism.languages.regex = {\n\t\t'charset': {\n\t\t\tpattern: /((?:^|[^\\\\])(?:\\\\\\\\)*)\\[(?:[^\\\\\\]]|\\\\[\\s\\S])*\\]/,\n\t\t\tlookbehind: true,\n\t\t\tinside: {\n\t\t\t\t'charset-negation': {\n\t\t\t\t\tpattern: /(^\\[)\\^/,\n\t\t\t\t\tlookbehind: true,\n\t\t\t\t},\n\t\t\t\t'charset-punctuation': /^\\[|\\]$/,\n\t\t\t\t'range': {\n\t\t\t\t\tpattern: range,\n\t\t\t\t\tinside: {\n\t\t\t\t\t\t'escape': escape,\n\t\t\t\t\t\t'range-punctuation': /-/\n\t\t\t\t\t}\n\t\t\t\t},\n\t\t\t\t'special-escape': specialEscape,\n\t\t\t\t'charclass': charClass,\n\t\t\t\t'backreference': backreference,\n\t\t\t\t'escape': escape\n\t\t\t}\n\t\t},\n\t\t'special-escape': specialEscape,\n\t\t'charclass': charClass,\n\t\t'backreference': backreference,\n\t\t'anchor': /[$^]|\\\\[ABbGZz]/,\n\t\t'escape': escape,\n\t\t'group': [\n\t\t\t{\n\t\t\t\t// https://docs.oracle.com/javase/10/docs/api/java/util/regex/Pattern.html\n\t\t\t\t// https://docs.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-language-quick-reference?view=netframework-4.7.2#grouping-constructs\n\n\t\t\t\t// (), (?<name>), (?'name'), (?>), (?:), (?=), (?!), (?<=), (?<!), (?is-m), (?i-m:)\n\t\t\t\tpattern: /\\((?:\\?(?:<[^<>']+>|'[^<>']+'|[>:]|<?[=!]|[idmnsuxU]+(?:-[idmnsuxU]+)?:?))?/,\n\t\t\t\tinside: {\n\t\t\t\t\t'group-name': groupName\n\t\t\t\t}\n\t\t\t},\n\t\t\t/\\)/\n\t\t],\n\t\t'quantifier': /[+*?]|\\{(?:\\d+,?\\d*)\\}/,\n\t\t'alternation': /\\|/\n\t};\n\n\n\t[\n\t\t'actionscript',\n\t\t'coffescript',\n\t\t'flow',\n\t\t'javascript',\n\t\t'typescript',\n\t\t'vala'\n\t].forEach(function (lang) {\n\t\tvar grammar = Prism.languages[lang];\n\t\tif (grammar) {\n\t\t\tgrammar['regex'].inside = {\n\t\t\t\t'regex-flags': /[a-z]+$/,\n\t\t\t\t'regex-delimiter': /^\\/|\\/$/,\n\t\t\t\t'language-regex': {\n\t\t\t\t\tpattern: /[\\s\\S]+/,\n\t\t\t\t\tinside: Prism.languages.regex\n\t\t\t\t}\n\t\t\t};\n\t\t}\n\t});\n\n}(Prism))\n\n\n//# sourceURL=webpack:///./node_modules/prismjs/components/prism-regex.js?");
+
+/***/ })
+
+};;
