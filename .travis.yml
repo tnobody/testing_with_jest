@@ -9,6 +9,7 @@ script:
   - (mkdir -p web && cp -a slides/dist/. web)
   - (mkdir -p web/coverage && cp -a demo/coverage/. web/coverage)
   - (mkdir -p web/demo && cp -a demo/dist/. web/demo)
+  - (mkdir -p web/images cp -a slides/images/. web/images)
   - cp now.json web/
 deploy:
   provider: script

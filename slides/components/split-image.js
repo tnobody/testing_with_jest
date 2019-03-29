@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
-
+import {Image} from 'mdx-deck';
 
 const Flex = styled.div `
     display: flex;
@@ -15,8 +15,6 @@ const TitleImage = styled.img `
     margin-bottom: 1rem;
     max-height: 50vh;
 `
-
-
 
 export const SplitImage = ({
     imgSrc,
