@@ -6,10 +6,13 @@ before_script:
 script: 
   - (cd slides && npm i && npm run build)
   - (cd demo && npm i && npm t -- --coverage && npm run build)
-  - (mkdir web && cp -a slides/dist/. web)
+  - (mkdir -p web && cp -a slides/dist/. web)
+  - (mkdir -p web/coverage && cp -a demo/coverage/. web/coverage)
+  - (mkdir -p web/demo && cp -a demo/dist/. web/demo)
+  - cp now.json web/
 deploy:
   provider: script
-  script: now ./web --no-clipboard --token=$NOW_TOKEN --public
+  script: now ./web --token=$NOW_TOKEN --public
   skip_cleanup: true
   on:
     branch: master
