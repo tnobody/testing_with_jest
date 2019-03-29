@@ -2,17 +2,14 @@ language: node_js
 node_js:
   - "10"
 before_script:
-  - npm i gh-pages -g
+  - npm i now -g
 script: 
   - (cd slides && npm i && npm run build)
   - (cd demo && npm i && npm t -- --coverage && npm run build)
   - (mkdir web && cp -a slides/dist/. web)
-  #- gh-pages --dist web --repo=https://$(GH_TOKEN)@github.com/tnobody/testing_with_jest.git --silent
 deploy:
-  provider: pages
+  provider: script
+  script: now ./out --static --no-clipboard --token=$NOW_TOKEN --public
   skip_cleanup: true
-  github_token: $GH_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  local_dir: web
   on:
     branch: master
