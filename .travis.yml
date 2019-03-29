@@ -5,7 +5,7 @@ before_script:
   - npm i now -g
 script: 
   - (cd slides && npm i && npm run build)
-  - (cd demo && npm i && npm t -- --coverage && npm run build)
+  - (cd demo && npm i && npm t -- --coverage && npm run build -- --global demo/)
   - (mkdir -p web && cp -a slides/dist/. web)
   - (mkdir -p web/coverage && cp -a demo/coverage/. web/coverage)
   - (mkdir -p web/demo && cp -a demo/dist/. web/demo)
