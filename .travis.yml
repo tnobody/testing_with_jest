@@ -9,7 +9,7 @@ script:
   - (mkdir web && cp -a slides/dist/. web)
 deploy:
   provider: script
-  script: now ./web --static --no-clipboard --token=$NOW_TOKEN --public
+  script: now ./web --no-clipboard --token=$NOW_TOKEN --public
   skip_cleanup: true
   on:
     branch: master
